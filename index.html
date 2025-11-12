@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto 2 - Tanque</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="module" src="./app.js"></script>
+</head>
+<body>
+    <canvas id="gl-canvas" width="800" height="600">
+        Oops! O teu browser não suporta o elemento canvas.
+    </canvas>
+    
+    <div id="best-time-display">Best: --:--</div>
+    <button id="start-game-button">Start Game</button>
+    <button id="end-game-button" style="display: none;">End Game</button>
+    <div id="score-display" style="display: none;">Score: 0</div>
+    <div id="timer-display" style="display: none;">Time: 0:00.00</div>
+    <div id="targets-left-display" style="display: none;">Targets: 0</div>
+    
+    <div id="control-panel">
+        <div class="panel-header">Keys</div>
+        <div class="panel-content">
+            <div class="control-item"><span class="key-text">'h'</span> – Toggle this panel</div>
+            <div class="control-item"><span class="key-text">'z'</span> : Shoot tomato</div>
+            <div class="control-item"><span class="key-text">'0'</span> : Toggle 1/4 views</div>
+            <div class="control-item"><span class="key-text">'1'</span> : Front view</div>
+            <div class="control-item"><span class="key-text">'2'</span> : Left view</div>
+            <div class="control-item"><span class="key-text">'3'</span> : Top view</div>
+            <div class="control-item"><span class="key-text">'4'</span> : 4th view</div>
+            <div class="control-item"><span class="key-text">'8'</span> : Toggle 4th view (Oblique vs Axonometric)</div>
+            <div class="control-item"><span class="key-text">'9'</span> : Parallel vs Perspective</div>
+            <div class="control-item"><span class="key-text">" "</span> : Toggle wireframe/solid</div>
+            <div class="control-item"><span class="key-text">'q'</span> : Move forward</div>
+            <div class="control-item"><span class="key-text">'e'</span> : Move backward</div>
+            <div class="control-item"><span class="key-text">'w'</span> : Raise cannon</div>
+            <div class="control-item"><span class="key-text">'s'</span> : Lower cannon</div>
+            <div class="control-item"><span class="key-text">'a'</span> : Rotate cabin ccw</div>
+            <div class="control-item"><span class="key-text">'d'</span> : Rotate cabin cw</div>
+            <div class="control-item"><span class="key-text">'r'</span> : Reset view params</div>
+            <div class="control-item"><span class="key-text">'←'</span> : Increase theta</div>
+            <div class="control-item"><span class="key-text">'→'</span> : Decrease theta</div>
+            <div class="control-item"><span class="key-text">'↑'</span> : Increase gamma</div>
+            <div class="control-item"><span class="key-text">'↓'</span> : Decrease gamma</div>
+        </div>
+    </div>
+</body>
+</html>

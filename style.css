@@ -1,0 +1,199 @@
+body, html {
+    height: 100%;
+}
+body {
+    margin: 0px;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+#control-panel {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #d3d3d3;
+    border-radius: 6px;
+    padding: 0;
+    min-width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-family: sans-serif;
+    z-index: 1000;
+}
+
+.panel-header {
+    background: #d3d3d3;
+    color: #333;
+    padding: 10px 12px;
+    font-weight: normal;
+    font-size: 14px;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    text-align: left;
+}
+
+.panel-content {
+    padding: 8px 12px 12px 12px;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.control-item {
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.control-item:last-child {
+    margin-bottom: 0;
+}
+
+.key-text {
+    font-family: monospace;
+    color: #333;
+}
+
+#start-game-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(70, 130, 180, 0.85);
+    border: 2px solid rgba(100, 149, 237, 0.6);
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#start-game-button:hover {
+    background: rgba(100, 149, 237, 0.95);
+    border-color: rgba(135, 206, 250, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-1px);
+}
+
+#start-game-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    background: rgba(70, 130, 180, 0.9);
+}
+
+#end-game-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(220, 20, 60, 0.85);
+    border: 2px solid rgba(255, 69, 0, 0.6);
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 2000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#end-game-button:hover {
+    background: rgba(255, 69, 0, 0.95);
+    border-color: rgba(255, 99, 71, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-1px);
+}
+
+#end-game-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    background: rgba(220, 20, 60, 0.9);
+}
+
+#score-display {
+    position: fixed;
+    top: 10px;
+    right: 365px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    z-index: 1001;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+#timer-display {
+    position: fixed;
+    top: 10px;
+    right: 170px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    z-index: 1001;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+#targets-left-display {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffa500;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    z-index: 1001;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 165, 0, 0.5);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+#best-time-display {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #90ee90;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(144, 238, 144, 0.5);
+    white-space: nowrap;
+    height: fit-content;
+    line-height: 1.4;
+}
