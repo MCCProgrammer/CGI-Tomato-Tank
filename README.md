@@ -8,6 +8,8 @@
   <img alt="Year" src="https://img.shields.io/badge/2025%2F26-3rd%20year%2C%201st%20semester-1f2328?style=flat-square">
 </p>
 
+**▶️ [Live demo](https://mccprogrammer.github.io/CGI-Tomato-Tank/)** — runs in the browser (desktop, keyboard needed).
+
 Project 2 of *Computação Gráfica e Interfaces* (Computer Graphics and Interfaces), Computer Science degree at **NOVA School of Science and Technology (FCT NOVA)**.
 
 <p align="center"><img src="docs/tank-views.png" width="760" alt="The tank seen from four cameras at once"></p>
